@@ -1,0 +1,19 @@
+{
+  "name": "mongoose-erd-generator",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "viz.js": "^2.0.0"
+  },
+  "devDependencies": {},
+  "bin":{
+   "mongoose-erd-generator":"./bin/index.js"
+},
+  "scripts": {
+    "mongoose-erd-generator":"node ./bin/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

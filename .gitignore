@@ -2,7 +2,6 @@
 *.svg
 *.png
 *.ps
-*.json
 *.erd
 *.gif
 /models
