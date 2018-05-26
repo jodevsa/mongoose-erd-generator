@@ -1,0 +1,10 @@
+/node_modules
+*.svg
+*.png
+*.ps
+*.json
+*.erd
+*.gif
+/models
+/db
+/helpers
