@@ -1,10 +1,11 @@
+#!/usr/bin/env node
 var program = require('commander');
 const process = require('process');
 const fs = require('fs');
 const util = require('util');
 readdir = util.promisify(fs.readdir)
 const path = require('path');
-const ERD = require('./lib/ERD');
+const ERD = require('../lib/ERD');
 const allowedFormats=["svg", "dot", "xdot", "plain", "plain-ext", "ps", "ps2", "json", "json0"];
 const main = async () => {
   try {
@@ -13,6 +14,7 @@ const main = async () => {
       .option('-p, --path <path>', 'set models path wanted to generate an ERD from.')
       .option('-o, --output <path>', 'set output path')
       .option('-f, --format [svg,dot,xdot,plain,plan-ext,ps,ps2,json,json0]')
+      .option('-c, --color <color>')
       .parse(process.argv);
     if(allowedFormats.indexOf(program.format)==-1){
         console.log(`Format :'${program.format}', is not supported.`);
@@ -33,11 +35,12 @@ const main = async () => {
       const svg = await ERD.generateFromModels(models, {
         format:program.format,
         collection: {
-          bgcolor: 'yellow'
+          bgcolor: program.color || 'yellow'
         }
       });
 
       fs.writeFileSync(outputFilePath, svg);
+      console.log('ERD written to',outputFilePath);
     }
   } catch (e) {
     console.log(e)
