@@ -35,7 +35,8 @@ const main = async () => {
       const svg = await ERD.generateFromModels(models, {
         format:program.format,
         collection: {
-          bgcolor: program.color || 'yellow'
+          nameColor:'lightblue',
+          backgroundColor: program.color || '#4477c9'
         }
       });
 

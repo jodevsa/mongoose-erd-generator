@@ -1,7 +1,7 @@
 Mongoose-erd-generator
 ===============================
 
-a tool that extracts  information from mongoose schemas and turns them to an ERD diagram.
+A tool that extracts  information from mongoose schemas and turns them into a ERD diagram.
 
 
 [![Build Status](https://travis-ci.org/jodevsa/node-bitview.svg?branch=master)](https://travis-ci.org/jodevsa/node-bitview)
@@ -11,6 +11,7 @@ a tool that extracts  information from mongoose schemas and turns them to an ERD
 ![stars](https://img.shields.io/github/stars/jodevsa/node-bitview.svg)
 ![license](https://img.shields.io/github/license/jodevsa/node-bitview.svg)
 
+![ERD Diagram generated from this tool](https://i.imgur.com/NFE4HMz.png)
 Installation
 -----
 
@@ -18,16 +19,15 @@ Installation
 
 Running the script
 -----
-  mongoose-erd-generator -o modelsPath
-
-##### options:
 Usage: mongoose-erd-generator [options]
 
-Options:
+##### Options:
 
     -V, --version                                                 output the version number
     -p, --path <path>                                             set models path wanted to generate an ERD from.
     -o, --output <path>                                           set output path
     -f, --format [svg,dot,xdot,plain,plan-ext,ps,ps2,json,json0]  
     -c, --color <color>                                           
-    -h, --help                                         
+    -h, --help                                 
+example
+-------        
