@@ -15,6 +15,7 @@ const main = async () => {
       .option('-o, --output <path>', 'set output path')
       .option('-f, --format [svg,dot,xdot,plain,plan-ext,ps,ps2,json,json0]')
       .option('-c, --color <color>')
+      .option('-i, --ignore-index','ignore any files called index.js')
       .parse(process.argv);
     if(allowedFormats.indexOf(program.format)==-1){
         console.log(`Format :'${program.format}', is not supported.`);
@@ -27,7 +28,7 @@ const main = async () => {
       const modelsPath = await readdir(modelDirectory);
       const models = [];
       for (const _model of modelsPath) {
-        if (_model.indexOf('.js') != -1) {
+        if (_model.indexOf('.js') != -1 && !(_model === "index.js" && program.ignoreIndex)){
           const model = require(path.join(modelDirectory, _model));
           models.push(model);
         }
