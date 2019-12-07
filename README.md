@@ -26,6 +26,7 @@ Usage: mongoose-erd-generator [options]
     -V, --version                                                 output the version number
     -p, --path <path>                                             set models path wanted to generate an ERD from.
     -o, --output <path>                                           set output path
+    -i, --ignore-index                                            ignore any files called index.js
     -f, --format [svg,dot,xdot,plain,plan-ext,ps,ps2,json,json0]  
     -c, --color <color>                                           
     -h, --help                                 
