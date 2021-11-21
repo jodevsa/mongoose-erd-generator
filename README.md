@@ -30,5 +30,15 @@ Usage: mongoose-erd-generator [options]
     -f, --format [svg,dot,xdot,plain,plan-ext,ps,ps2,json,json0]  
     -c, --color <color>                                           
     -h, --help                                 
+
 example
 -------        
+##### Global install:
+`npm install mongoose-erd-generator -g`
+
+##### Run CMD:
+###### MAC / LINUX
+`mongoose-erd-generator -p ./path_to_models_folder/ -f svg -o ./erd.svg`
+
+###### WINDOWS
+`mongoose-erd-generator -p .\path_to_models_folder\ -f svg -o .\erd.svg`
